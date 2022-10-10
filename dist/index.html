@@ -18,15 +18,34 @@
             <button type="button">Refresh</button>
           </div>
           <div class="scores">
-            <table>
+            <table class="score-table">
               <thead>
-                <tr>
-                  <th>Rank</th>
-                  <th>User</th>
-                  <th>Points</th>
-                </tr>
+                <th>Rank</th>
+                <th>User</th>
+                <th>Points</th>
               </thead>
-              <tbody class="tbody"></tbody>
+              <tbody class="tbody">
+                <tr>
+                  <td>1</td>
+                  <td>Name:</td>
+                  <td>100</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Name:</td>
+                  <td>90</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Name:</td>
+                  <td>80</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Name:</td>
+                  <td>70</td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
@@ -34,10 +53,13 @@
           <div class="heading">
             <h2>Add your Score</h2>
           </div>
-          <form>
-            <input type="text" placeholder="Your name" />
-            <input type="number" placeholder="Your Score" />
-            <button type="button">Submit</button>
+          <form class="input-form">
+            <input type="text" placeholder="Your name" class="input" /> <br />
+            <input type="number" placeholder="Your Score" class="input" />
+            <br />
+            <div class="submit">
+              <button type="button" class="submit-btn">Submit</button>
+            </div>
           </form>
         </div>
       </div>
