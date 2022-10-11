@@ -2,7 +2,7 @@ import Scores from './Scores.js';
 
 class Requests {
   static sendData() {}
-  getData() {
+ static getData() {
     axios
       .get(
         'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kvZLvGVUqYif8ehySShj/scores/'
