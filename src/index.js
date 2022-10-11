@@ -1,14 +1,14 @@
 import './style.scss';
-import Requests from './modules/Requests';
+import Requests from './modules/Requests.js';
 
-//Variables
+// Variables
 const submitBtn = document.querySelector('.submit-btn');
 const refresh = document.querySelector('.refresh-btn');
 
 // Invoke functions
 Requests.getData();
 
-//Events
+// Events
 submitBtn.addEventListener('click', () => {
   Requests.sendData();
 });

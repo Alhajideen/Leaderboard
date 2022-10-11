@@ -12,7 +12,7 @@ class Requests {
     try {
       const data = await axios.post(
         'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kvZLvGVUqYif8ehySShj/scores/',
-        newData
+        newData,
       );
       Requests.getData();
       sucess.style.color = 'green';
@@ -33,7 +33,7 @@ class Requests {
   static async getData() {
     try {
       const res = await axios.get(
-        'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kvZLvGVUqYif8ehySShj/scores/'
+        'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kvZLvGVUqYif8ehySShj/scores/',
       );
       const data = await res.data.result;
       const tbody = document.querySelector('.tbody');
