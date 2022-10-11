@@ -1,5 +1,5 @@
 import './style.scss';
-import Scores from './modules/Scores.js';
+import Requests from './modules/Requests';
 
-const tbody = document.querySelector('.tbody');
-tbody.innerHTML = Scores.render();
+
+Requests.sendData();
