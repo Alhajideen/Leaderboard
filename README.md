@@ -12,7 +12,7 @@
 - Webpack
 
 ## Live Demo
-[Not available yet but checkout this cool GIF](https://giphy.com/clips/hamlet-jJjb9AUHOiP3nJJMdy)
+[Live Demo](https://joyful-meerkat-6bf6f7.netlify.app)
 
 
 ## Getting Started
