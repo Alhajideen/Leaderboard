@@ -1,78 +1,265 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .main-container {
   height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: auto;
 
   .headers {
-    margin: 15px;
+    height: 18vh;
+    display: flex;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: rgb(224, 0, 194);
+      margin: 20px 0 0 100px;
+    }
+
+    .border {
+      display: none;
+    }
   }
 
   .container {
     width: 70%;
     display: flex;
+    margin: auto 100px;
     justify-content: space-between;
+    height: 60vh;
+    background-color: rgba(92, 1, 211, 0.801);
+    border-radius: 15px;
+    padding: 30px;
 
     .recent-scores {
-      width: 45%;
+      width: 40%;
 
       .header {
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+
+        h2 {
+          color: white;
+          font-size: 1.5em;
+          margin-block-start: 0.83em;
+          margin-block-end: 0.83em;
+          margin-inline-start: 0;
+          margin-inline-end: 0;
+          font-weight: bold;
+        }
 
         button {
-          height: 20px;
-          border: solid 2px;
+          width: 100px;
+          height: 30px;
+          outline: none;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 1rem;
+          color: rgb(255, 255, 255);
+          background: rgb(224, 0, 194);
+          box-shadow: 3px 3px 8px 1px rgb(0 0 0 / 35%);
         }
       }
 
       .scores {
         text-align: center;
+        width: 100%;
+        height: 47vh;
+        background-color: white;
+        overflow-y: scroll;
+        border-radius: 10px;
 
         .score-table {
-          width: 98%;
+          width: 100%;
           margin: auto;
+
+          .thead {
+            color: blueviolet;
+            font-size: 20px;
+            font-weight: 600;
+          }
+
+          .tbody {
+            color: rgb(224, 0, 194);
+            font-size: 15px;
+
+            tr:nth-child(odd) {
+              background: #fff;
+              padding: 5px 0;
+            }
+
+            tr:nth-child(even) {
+              background-color: rgba(92, 1, 211, 0.247);
+              padding: 5px 0;
+            }
+          }
         }
+      }
+
+      .scores::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      .scores::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+
+      .scores::-webkit-scrollbar-thumb {
+        background: rgb(224, 0, 194);
+        border-radius: 10px;
+      }
+
+      .scores::-webkit-scrollbar-thumb:hover {
+        background: rgb(224, 0, 194);
       }
     }
 
     .add-scores {
       width: 45%;
+      margin: 25px 0;
 
       .heading {
         display: flex;
         justify-content: flex-start;
+
+        h2 {
+          font-size: 2rem;
+          color: white;
+        }
       }
 
       .input-form {
         width: 100%;
 
         .input {
-          width: 80%;
-          margin: 10px auto;
           height: 30px;
+          width: 80%;
+          padding: 0 10px;
+          margin: 10px 0;
+          font-size: 0.9rem;
+          color: rgb(43, 43, 43);
+          outline: none;
+          border: none;
+          border-radius: 5px;
+          box-shadow: 3px 3px 8px 1px rgb(0 0 0 / 35%);
         }
 
         .sucess {
           margin: 5px 0;
+          background-color: white;
         }
 
         .submit {
-          width: 80%;
+          width: 86%;
           text-align: end;
 
           .submit-btn {
-            width: 30%;
-            margin-left: auto;
-            border: solid 2px;
+            width: 100px;
+            height: 30px;
+            margin: 10px 0;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            color: rgb(255, 255, 255);
+            background: rgb(224, 0, 194);
+            box-shadow: 3px 3px 8px 1px rgb(0 0 0 / 35%);
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: black;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+    .foot-text {
+      color: white;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-container {
+    .headers {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 10vh;
+
+      h1 {
+        font-size: 2.5rem;
+        margin: 0;
+      }
+
+      .border {
+        display: block;
+        height: 2px;
+        width: 20px;
+        background-color: rgb(224, 0, 194);
+      }
+    }
+
+    .container {
+      width: 100%;
+      display: block;
+      height: auto;
+      background-color: rgba(92, 1, 211, 0.801);
+      border-radius: 15px 15px 0 0;
+      margin: 0;
+      padding: 20px 0;
+
+      .recent-scores {
+        width: 90%;
+        margin: auto;
+      }
+
+      .scores {
+        height: 45vh !important;
+      }
+
+      .add-scores {
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        text-align: center;
+
+        .heading {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          h2 {
+            font-size: 1.5rem;
+          }
+        }
+
+        .form {
+          .input {
+            height: 5vh;
+            width: 90%;
+          }
+
+          .submit {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
           }
         }
       }

@@ -12,28 +12,32 @@ class Requests {
     try {
       const data = await axios.post(
         'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kvZLvGVUqYif8ehySShj/scores/',
-        newData,
+        newData
       );
       Requests.getData();
       sucess.style.color = 'green';
-      sucess.innerHTML = 'Score added succesfully :)';
+      sucess.style.padding = '10px';
+      sucess.innerHTML = '✅Score added succesfully :)';
       setTimeout(() => {
         sucess.innerHTML = '';
-      }, 2000);
+        sucess.style.padding = '0';
+      }, 3000);
     } catch (err) {
       console.error(err.message);
       sucess.style.color = 'red';
-      sucess.innerHTML = 'Oops something is not right';
+      sucess.style.padding = '10px';
+      sucess.innerHTML = '❌Oops something is not right';
       setTimeout(() => {
         sucess.innerHTML = '';
-      }, 2000);
+        sucess.style.padding = '0';
+      }, 3000);
     }
   }
 
   static async getData() {
     try {
       const res = await axios.get(
-        'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kvZLvGVUqYif8ehySShj/scores/',
+        'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kvZLvGVUqYif8ehySShj/scores/'
       );
       const data = await res.data.result;
       const tbody = document.querySelector('.tbody');
