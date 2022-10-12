@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
     <title>Leaderboard</title>
   </head>
   <body>
@@ -19,7 +25,7 @@
           </div>
           <div class="scores">
             <table class="score-table">
-              <thead>
+              <thead class="thead">
                 <th>User</th>
                 <th>Points</th>
               </thead>
@@ -46,13 +52,16 @@
               required
             />
             <br />
-            <small class="sucess"></small>
             <div class="submit">
               <button type="button" class="submit-btn">Submit</button>
             </div>
+            <small class="sucess"></small>
           </form>
         </div>
       </div>
+      <footer class="footer">
+        <h2>Deen - © All rights reserved.</h2>
+      </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </body>

@@ -16,14 +16,14 @@ class Requests {
       );
       Requests.getData();
       sucess.style.color = 'green';
-      sucess.innerHTML = 'Score added succesfully :)';
+      sucess.innerHTML = '✅Score added succesfully :)';
       setTimeout(() => {
         sucess.innerHTML = '';
       }, 2000);
     } catch (err) {
       console.error(err.message);
       sucess.style.color = 'red';
-      sucess.innerHTML = 'Oops something is not right';
+      sucess.innerHTML = '❌Oops something is not right';
       setTimeout(() => {
         sucess.innerHTML = '';
       }, 2000);
