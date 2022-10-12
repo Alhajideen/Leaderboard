@@ -18,6 +18,10 @@
       color: rgb(224, 0, 194);
       margin: 20px 0 0 200px;
     }
+
+    .border {
+      display: none;
+    }
   }
 
   .container {
@@ -102,19 +106,16 @@
         width: 10px;
       }
 
-      /* Track */
       .scores::-webkit-scrollbar-track {
         box-shadow: inset 0 0 5px grey;
         border-radius: 10px;
       }
 
-      /* Handle */
       .scores::-webkit-scrollbar-thumb {
         background: rgb(224, 0, 194);
         border-radius: 10px;
       }
 
-      /* Handle on hover */
       .scores::-webkit-scrollbar-thumb:hover {
         background: rgb(224, 0, 194);
       }
@@ -190,5 +191,73 @@
 }
 
 @media (max-width: 767px) {
-  
+  .main-container {
+    .headers {
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 10vh;
+
+      h1 {
+        font-size: 2.5rem;
+        margin: 0;
+      }
+
+      .border {
+        display: block;
+        height: 2px;
+        width: 20px;
+        background-color: rgb(224, 0, 194);
+      }
+    }
+    .container {
+      width: 100%;
+      display: block;
+      height: auto;
+      background-color: rgba(92, 1, 211, 0.801);
+      border-radius: 15px 15px 0 0;
+      margin: 0;
+      padding: 20px 0;
+
+      .recent-scores {
+        width: 90%;
+        margin: auto;
+      }
+
+      .scores {
+        height: 45vh !important;
+      }
+      .add-scores {
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+        text-align: center;
+
+        .heading {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          h2 {
+            font-size: 1.5rem;
+          }
+        }
+
+        .form {
+          .input {
+            height: 5vh;
+            width: 90%;
+          }
+
+          .submit {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
 }
