@@ -11,7 +11,7 @@ class Requests {
     const newData = new Data(user, scores);
     try {
       const data = await axios.post(
-        'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kvZLvGVUqYif8ehySShj/scores/',
+        'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/FvsVo1cT2v4UzBAycmOv/scores/',
         newData
       );
       Requests.getData();
@@ -37,7 +37,7 @@ class Requests {
   static async getData() {
     try {
       const res = await axios.get(
-        'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kvZLvGVUqYif8ehySShj/scores/'
+        'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/FvsVo1cT2v4UzBAycmOv/scores/'
       );
       const data = await res.data.result;
       const tbody = document.querySelector('.tbody');
