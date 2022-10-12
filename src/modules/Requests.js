@@ -20,7 +20,8 @@ class Requests {
       sucess.innerHTML = '✅Score added succesfully :)';
       setTimeout(() => {
         sucess.innerHTML = '';
-      }, 2000);
+        sucess.style.padding = '0';
+      }, 3000);
     } catch (err) {
       console.error(err.message);
       sucess.style.color = 'red';
@@ -29,7 +30,7 @@ class Requests {
       setTimeout(() => {
         sucess.innerHTML = '';
         sucess.style.padding = '0';
-      }, 2000);
+      }, 3000);
     }
   }
 
