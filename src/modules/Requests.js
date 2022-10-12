@@ -12,10 +12,11 @@ class Requests {
     try {
       const data = await axios.post(
         'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kvZLvGVUqYif8ehySShj/scores/',
-        newData,
+        newData
       );
       Requests.getData();
       sucess.style.color = 'green';
+      sucess.style.padding = '10px';
       sucess.innerHTML = '✅Score added succesfully :)';
       setTimeout(() => {
         sucess.innerHTML = '';
@@ -23,9 +24,11 @@ class Requests {
     } catch (err) {
       console.error(err.message);
       sucess.style.color = 'red';
+      sucess.style.padding = '10px';
       sucess.innerHTML = '❌Oops something is not right';
       setTimeout(() => {
         sucess.innerHTML = '';
+        sucess.style.padding = '0';
       }, 2000);
     }
   }
@@ -33,7 +36,7 @@ class Requests {
   static async getData() {
     try {
       const res = await axios.get(
-        'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kvZLvGVUqYif8ehySShj/scores/',
+        'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/kvZLvGVUqYif8ehySShj/scores/'
       );
       const data = await res.data.result;
       const tbody = document.querySelector('.tbody');
