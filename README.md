@@ -66,3 +66,7 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./LICENSE) licensed.
+
+## Design Inspiration
+
+- [Stanley Simeon](https://stanleysimeon.github.io/Leaderboard/)
