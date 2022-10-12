@@ -1,5 +1,18 @@
 import './style.scss';
-import Scores from './modules/Scores.js';
+import Requests from './modules/Requests.js';
 
-const tbody = document.querySelector('.tbody');
-tbody.innerHTML = Scores.render();
+// Variables
+const submitBtn = document.querySelector('.submit-btn');
+const refresh = document.querySelector('.refresh-btn');
+
+// Invoke functions
+Requests.getData();
+
+// Events
+submitBtn.addEventListener('click', () => {
+  Requests.sendData();
+});
+
+refresh.addEventListener('click', () => {
+  Requests.getData();
+});

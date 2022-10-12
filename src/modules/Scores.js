@@ -1,27 +1,15 @@
 export default class Dom {
-  static render() {
-    const tdata = `
+  static render(data) {
+    let tdata = '';
+    data.forEach((elem) => {
+      tdata += `
    <tr>
-                  <td>1</td>
-                  <td>Name:</td>
-                  <td>100</td>
-                </tr>
-                 <tr>
-                  <td>2</td>
-                  <td>Name:</td>
-                  <td>90</td>
-                </tr>
-                 <tr>
-                  <td>3</td>
-                  <td>Name:</td>
-                  <td>80</td>
-                </tr>
-                 <tr>
-                  <td>4</td>
-                  <td>Name:</td>
-                  <td>70</td>
+                  <td>${elem.user}</td>
+                  <td>${elem.score}</td>
                 </tr>
   `;
+    });
+
     return tdata;
   }
 }
