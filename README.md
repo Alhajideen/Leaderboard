@@ -12,7 +12,7 @@
 - Webpack
 
 ## Live Demo
-[Live Demo](https://joyful-meerkat-6bf6f7.netlify.app)
+[Live Demo](https://deen-leaderboard.netlify.app/)
 
 
 ## Getting Started
